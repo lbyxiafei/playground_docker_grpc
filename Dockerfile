@@ -1,8 +1,10 @@
-FROM ubuntu:bionic
+FROM python:3.7
 
-RUN apt-get update
-RUN apt-get install python3 python3-pip -y
+WORKDIR /app
 
-COPY ./requirements.txt /requirements.txt
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 
-RUN pip3 install -r /requirements.txt
+COPY . .
+
+CMD ["python3", "helloworld_server.py"]
