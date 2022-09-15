@@ -6,7 +6,7 @@ sys.path.append('.')
 import logging
 
 import grpc
-from protos.generated import helloworld_pb2, helloworld_pb2_grpc
+import helloworld_pb2, helloworld_pb2_grpc
 
 class HelloWorldServer(helloworld_pb2_grpc.GreeterServicer):
 
