@@ -21,11 +21,11 @@ services:
       networks:
         - envoymesh
       expose:
-        - "8888"
-        - "1337"
+        - "6666"
+        - "9999"
       ports:
-        - "8888:8888"
-        - "1337:1337"
+        - "6666:6666"
+        - "9999:9999"
 
 networks:
   envoymesh: {}
