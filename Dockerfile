@@ -1,10 +1,12 @@
 FROM python:3.7
 
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+COPY requirements.txt /app/
+
 RUN pip install -r requirements.txt
 
-COPY . .
-
-CMD ["python3", "helloworld_server.py"]
+COPY . /app/

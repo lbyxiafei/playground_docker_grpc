@@ -1,9 +1,9 @@
-version: '3.3'
+version: '3.9'
 
 services:
     helloworld-server:
         build: .
-        command: python3 ./code/helloworld_server.py
-        volumes:
-            - ./helloworld_server.py:/code/helloworld_server.py:ro
-            - ./protos/:/code/protos/
+        command: >
+            sh -c "python helloworld_server.py"
+        ports:
+            - "9999:50051"
