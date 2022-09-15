@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+    helloworld-server:
+        build: .
+        command: python3 ./code/helloworld_server.py
+        volumes:
+            - ./helloworld_server.py:/code/helloworld_server.py:ro
+            - ./protos/:/code/protos/
