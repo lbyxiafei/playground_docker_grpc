@@ -38,7 +38,6 @@ static_resources:
                           check_settings:
                             context_extensions:
                               virtual_host: local_service
-                      
 
                 http_filters:
                   - name: envoy.filters.http.grpc_web
@@ -50,7 +49,6 @@ static_resources:
                   - name: envoy.filters.http.router
                     typed_config:
                       "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
-                  - name: envoy.router
 
   clusters:
     - name: backend
