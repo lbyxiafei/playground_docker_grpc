@@ -11,7 +11,7 @@ import helloworld_pb2, helloworld_pb2_grpc
 class HelloWorldServer(helloworld_pb2_grpc.GreeterServicer):
 
     def SayHello(self, request, context):
-        return helloworld_pb2.HelloReply(message='Hello, %s!' % request.name)
+        return helloworld_pb2.HelloReply(message='Hello, %s~' % request.name)
 
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
